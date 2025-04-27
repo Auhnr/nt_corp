@@ -237,7 +237,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 50px 10%; /* Adjust padding for larger screens */
+        padding: 50px 10%; 
         background-color: #ffffff;
     }
 
@@ -270,6 +270,7 @@
     .footer-column {
         flex: 1;
         text-align: left;
+        width: 300px; /* Set a fixed width for columns */
     }
 
     .footer-column h4 {
