@@ -1,0 +1,180 @@
+.suppliers-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    padding: 10px 200px 100px 200px; /* Adjusted margin for top and bottom */
+}
+
+.suppliers-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Syne', sans-serif; /* Apply Syne font */
+}
+
+.suppliers-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+    width: 80%; /* Make the description wider */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Align text to the left */
+    line-height: 1.6;
+}
+
+
+
+.suppliers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.supplier-card {
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px; 
+    height: 300px; 
+    margin-bottom: 30px;
+}
+
+.supplier-card img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.empty-card {
+    background-color: transparent;
+    box-shadow: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+
+@media (max-width: 767px) {
+    .suppliers-section {
+        padding: 30px 20px; /* Уменьшаем отступы для мобильной версии */
+    }
+
+    .suppliers-title {
+        font-size: 28px; /* Уменьшаем размер шрифта для мобильных */
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px; /* Увеличиваем отступ снизу */
+        position: relative; /* Для псевдоэлемента */
+        display: inline-block; /* Чтобы псевдоэлемент не на всю ширину */
+        left: 50%;
+        transform: translateX(-50%); /* Точное центрирование */
+    }
+
+    /* Добавляем декоративную линию под заголовком (опционально) */
+    .suppliers-title::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #025595; /* Цвет как на вашем изображении */
+        margin: 15px auto 0; /* Отступ сверху и центрирование */
+    }
+
+    .suppliers-description {
+        display: none;
+    }
+
+    /* Адаптация сетки поставщиков для мобильных */
+    .suppliers-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 3 */
+        gap: 20px;
+    }
+
+    .supplier-card {
+        width: 100%; /* Занимает всю доступную ширину */
+        height: 150px; /* Уменьшаем высоту карточек */
+        margin-bottom: 0; /* Убираем лишний отступ */
+    }
+
+    .empty-card {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .suppliers-section {
+        padding: 50px 120px; /* Adjusted padding for medium screens */
+    }
+
+    .suppliers-title {
+        font-size: 30px; /* Slightly larger title size */
+        margin-bottom: 25px; /* Adjust spacing below the title */
+        padding: 0;
+    }
+
+    .suppliers-description {
+        font-size: 18px; /* Slightly larger subtitle size */
+        line-height: 1.5; /* Adjust line height */
+        margin-bottom: 35px; /* Adjust spacing below the subtitle */
+        width: 550px; /* Make the subtitle slightly wider */
+        padding: 0;  
+    }
+
+    .suppliers-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+        gap: 20px; /* Adjust spacing between cards */
+        justify-items: center;
+    }
+
+    .supplier-card {
+        width: 200px; /* Slightly larger card width */
+        height: 190px; /* Slightly larger card height */
+    }
+
+    .supplier-card img {
+        max-width: 75%; /* Adjust image size */
+        max-height: 75%;
+    }
+
+    .empty-card {
+        display: none; /* Hide the ninth card */
+    }   
+}
+
+@media (min-width: 1024px) {
+    .suppliers-section {
+      padding: 50px 5%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    
+    .suppliers-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 0 40px;
+    }
+    
+    .supplier-card {
+      max-width: 340px;
+    }
+
+
+  }
+
+  /* Большие экраны (1280px+) */
+@media (min-width: 1280px) {
+    .suppliers-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+
+@media (min-width: 1500px) {
+    .empty-card {
+        display: none; /* Hide the empty card on larger screens */
+    }
+}

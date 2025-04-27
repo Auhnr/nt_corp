@@ -1,0 +1,195 @@
+.about-section {
+    padding: 60px 9%;
+    background-color: #ffffff;
+}
+
+
+.about-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #16100D;
+    margin-bottom: 40px;
+    font-family: 'Syne', sans-serif;
+    text-align: center;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.about-card {
+    background-color: #ffffff; /* Default white background */
+    border-radius: 16px;
+    padding: 40px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    
+}
+
+.about-card.highlighted {
+    background-color: #025595;
+    color: #ffffff;
+}
+
+.about-card:last-child {
+    background-color: #EFF8FF; /* Light blue background for the last card */
+}
+
+.about-card:hover {
+    transform: translateY(-10px); 
+}
+
+.about-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.about-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: inherit;
+}
+
+.about-cards-wrapper {
+    display: flex;
+    justify-content: space-between; /* Position cards side by side */
+    align-items: stretch;
+    gap: 40px; /* Space between the cards */
+    padding: 40px 0; /* Adjust padding for spacing */
+    margin-left: 30px;
+}
+
+.about-card2,
+.about-card3 {
+    flex: 1;
+    width: 800px; /* Increase max-width to make them wider */
+    padding: 40px;
+    border-radius: 16px;
+    box-sizing: border-box;    
+    transition: transform 0.3s ease; /* Add transition for returning to the original position */
+    word-wrap: break-word;
+}
+
+.about-card2 {
+    background-color: #025595;
+    color: #ffffff;
+}
+
+.about-card3 {
+    background-color: #EFF8FF;
+    color: #16100D;
+}
+
+.about-card2 p,
+.about-card3 p {
+    font-size: 16px;
+    line-height: 1.6;
+    /* width: 500px; */
+    hyphens: auto;
+}
+
+.about-card2:hover,
+.about-card3:hover {
+    transform: translateY(-10px); /* Same hover effect as upper cards */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+@media (max-width: 767px) {
+    .about-cards-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack the last two cards vertically */
+        gap: 20px; /* Add spacing between the cards */
+        justify-content: center;
+        align-items: center; /* Center-align the cards */
+        margin-left: 0; /* Remove extra margin */
+        padding: 0;
+    }
+
+    .about-card2,
+    .about-card3 {
+        width: 100%; /* Ensure full width for both cards */
+        max-width: 500px; /* Limit the maximum width */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .about-card2 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-cards,
+    .about-cards-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack all cards vertically */
+        gap: 20px; /* Add consistent spacing between cards */
+        align-items: center; /* Center-align the cards */
+    }
+
+    .about-card,
+    .about-card2,
+    .about-card3 {
+        width: 100%; /* Make all cards take full width */
+        max-width: 600px; /* Limit the maximum width */
+        padding: 30px; /* Adjust padding for consistent spacing */
+        border-radius: 16px; /* Ensure consistent border radius */
+        box-sizing: border-box;
+    }
+
+    .about-card p,
+    .about-card2 p,
+    .about-card3 p {
+        font-size: 16px; /* Ensure consistent font size */
+        line-height: 1.6;
+        margin: 0; /* Remove extra margins */
+    }
+
+    .about-card h3,
+    .about-card2 h3,
+    .about-card3 h3 {
+        font-size: 20px; /* Ensure consistent heading size */
+        margin-bottom: 15px;
+    }
+
+    .about-card2,
+    .about-card3 {
+        margin-right: 30px;
+    }
+
+    .about-card2 {
+        margin-top: -20px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .about-cards-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: stretch;
+        width: 100%; /* Занимает всю доступную ширину */
+        margin: 40px 0 0 0; /* Только верхний отступ */
+        padding: 0;
+    }
+
+    .about-card2,
+    .about-card3 {
+        flex: 1; /* Равномерное распределение пространства */
+        min-width: 0; /* Важно для корректного сжатия */
+        padding: 30px;
+        border-radius: 16px;
+        box-sizing: border-box;
+    }
+
+}
+

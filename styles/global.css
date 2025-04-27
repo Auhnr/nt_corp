@@ -1,0 +1,90 @@
+@import url('footer.css');
+@import url('partners.css');
+@import url('suppliers.css');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f9ff;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.language-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(20px); }
+}
+
+.working-hours p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.working-hours .day {
+    font-weight: 500;
+    
+}
+
+.working-hours .hours {
+    text-align: center;
+    margin-right: 80px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contacts .contact-icon {
+    font-size: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 575px) {
+    body {
+        background-color: #EFF8FF; /* Set the overall background color */
+    }
+
+    .header,
+    .hero-section,
+    .about-section,
+    .partners-section,
+    .suppliers-section {
+        background-color: #EFF8FF; /* Ensure all sections have the same background */
+    }
+
+    .footer {
+        background-color: #ffffff; /* Keep the footer background white */
+    }
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
